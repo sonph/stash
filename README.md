@@ -9,7 +9,7 @@ For example:
     scp -R somepath 69.59.69.59:~/
     ssh 69.59.69.59
 
-Saving these into environment variables is a viable solution but they do not persist across different shell session.
+Saving these into environment variables is a viable solution but they do not persist across different shell session, so you'll have to redefine the value in new sessions.
 
 Storing them into dotfiles is simple, just `echo VAR=value >> ~/.zshenv`, but what if you want to change them or "refresh" in existing sessions (or maybe in different `tmux` tabs)? `source ~/.zshenv` everytime is surely too much of a hassle.
 
