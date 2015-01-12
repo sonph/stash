@@ -30,7 +30,7 @@ With this, now you can do:
     # and in another shell
     ssh `$ AWS`
 
-
+as it is possible to save and access from anywhere you have access to `stash` without ever having to reload.
 
 # Install
 In `zsh`:
