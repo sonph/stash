@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+
+import sys, os
+
+
+def main():
+    # read from stash file
+    try:
+        with open(STASHFILE_PATH) as f:
+            stash = {}
+            for line in f:
+                parts = line.strip().split(SEP, 1)
+                stash[parts[0]] = parts[1]
+    except:
+        stash = {}
+
+    # parse arguments
+
+    # write back to file
+    with open(STASHFILE_PATH, 'w') as f:
+        f.write('\n'.join(k + SEP + v.replace('\\', '\\\\')
+                          for k, v in stash.items()))
+
+if __name__ == '__main__':
+    main()
