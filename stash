@@ -7,7 +7,7 @@ import os
 STASHFILE_PATH = os.path.join(os.getenv('HOME'), '.stashfile')
 SEP = '|'
 USAGE = """NAME
-    stash - Persistent shell variables and values accross sessions.
+    stash - Persistent shell variables and values across sessions.
 
 SYNOPSIS
     stash <key> <value>
