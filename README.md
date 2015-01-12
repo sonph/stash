@@ -34,7 +34,9 @@ as it is possible to save and access from anywhere you have access to `stash` wi
 
 # Install
 In `zsh`:
-`wget -O $HOME/.stash https://raw.githubusercontent.com/sonph/stash/master/stash && chmod u+x $HOME/.stash && echo "alias \$='$HOME/.stash'" >> $HOME/.zshrc`
+
+    wget -O $HOME/.stash https://raw.githubusercontent.com/sonph/stash/master/stash && chmod u+x $HOME/.stash && echo "alias \$='$HOME/.stash'" >> $HOME/.zshrc
 
 In `bash`:
-`wget -O $HOME/.stash https://raw.githubusercontent.com/sonph/stash/master/stash && chmod u+x $HOME/.stash && echo "alias stash='$HOME/.stash'" >> $HOME/.bashrc`
+
+    wget -O $HOME/.stash https://raw.githubusercontent.com/sonph/stash/master/stash && chmod u+x $HOME/.stash && echo "alias stash='$HOME/.stash'" >> $HOME/.bashrc
