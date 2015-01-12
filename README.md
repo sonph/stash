@@ -18,3 +18,9 @@ Or better yet, if you are using `zsh` (this can't be done in `bash` AFAIK), alia
 * `$ <key> <value>` to save
 * `` `$ <key>` `` to access a value
 
+# Install
+In `zsh`:
+`wget -O $HOME/.stash https://raw.githubusercontent.com/sonph/stash/master/stash && chmod u+x $HOME/.stash && echo "alias \$='$HOME/.stash'" >> $HOME/.zshrc`
+
+In `bash`:
+`wget -O $HOME/.stash https://raw.githubusercontent.com/sonph/stash/master/stash && chmod u+x $HOME/.stash && echo "alias stash='$HOME/.stash'" >> $HOME/.bashrc`
