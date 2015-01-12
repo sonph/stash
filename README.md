@@ -4,6 +4,11 @@
 # Why
 A lot of times I need to use some values over and over again such as a server's IP address or a path.
 
+For example:
+
+    scp -R somepath 69.59.69.59:~/
+    ssh 69.59.69.59
+
 Saving these into environment variables is a viable solution but they do not persist across different shell session.
 
 Storing them into dotfiles is simple, just `echo VAR=value >> ~/.zshenv`, but what if you want to change them or "refresh" in existing sessions (or maybe in different `tmux` tabs)? `source ~/.zshenv` everytime is surely too much of a hassle.
@@ -17,6 +22,15 @@ Or better yet, if you are using `zsh` (this can't be done in `bash` AFAIK), alia
 
 * `$ <key> <value>` to save
 * `` `$ <key>` `` to access a value
+
+With this, now you can do:
+
+    $ AWS 69.59.69.59
+    scp -R somepath `$ AWS`:~/
+    # and in another shell
+    ssh `$ AWS`
+
+
 
 # Install
 In `zsh`:
