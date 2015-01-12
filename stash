@@ -22,6 +22,7 @@ DESCRIPTION
 
 """
 
+
 def main():
     # read from stash file
     try:
@@ -34,7 +35,6 @@ def main():
         stash = {}
 
     # parse arguments
-        # parse arguments
     nargs = len(sys.argv) - 1
     if nargs == 0:
         print(USAGE)
@@ -52,7 +52,13 @@ def main():
         else:
             print(stash.get(arg, ''), end='')
     elif nargs >= 2:
-        pass
+        if '--stdin' in sys.argv:
+            key = filter(lambda x: x != '--stdin', sys.argv[1:])[0]
+            stash[key] = str(sys.stdin.read())
+        else:
+            key = sys.argv[1]
+            value = ' '.join(sys.argv[2:])
+            stash[key] = value
 
     # write back to file
     with open(STASHFILE_PATH, 'w') as f:
